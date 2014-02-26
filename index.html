@@ -1,1 +1,65 @@
-Hello world
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var presentations = [
+                {
+                    name: '',
+                    time: 30,
+                    url: 'https://swecogroup-my.sharepoint.com/personal/martin_hultman_sweco_se/_layouts/15/WopiFrame.aspx?sourcedoc={0ed58290-289b-4967-a206-682f637d928a}&action=embedview&wdAr=1.3333333333333333&wdEaa=1'
+                },
+                {
+                    name: 'test',
+                    time: 30,
+                    url: '//slid.es/hulken/test_hulken/embed?token=vUC2C7rFKW6pyfqRRAa9LQhwfEQr&style=light'
+                    
+                },
+
+                
+                {
+                    name: 'test',
+                    time: 30,
+                    url: 'https://docs.google.com/presentation/d/1suKLs1hFMeRNt9ukAoCvy4KB5H62uXygX3BnytC2Bnk/embed?start=true&loop=true&delayms=3000'
+                }
+            ];
+
+            var $presentation = $('#presentation');
+
+            var i = -1;
+            function animation () {
+                
+                setTimeout(function () {
+                    
+                    if (i < (presentations.length-1)) {
+                        i++;    
+                    } else {
+                        i = 0;
+                    }
+                    presentation = presentations[i];
+
+                    console.log(i);
+                    $presentation.attr('src', presentation.url);
+                    
+
+                    animation();
+                }, presentation.time*1000)
+            }
+
+            animation();
+        
+           
+            $presentation.width($(window).width()).height($(window).height());
+        });
+    </script>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="presentation" src="" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</body>
+</html>
