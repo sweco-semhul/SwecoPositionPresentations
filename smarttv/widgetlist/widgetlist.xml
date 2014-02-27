@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsp stat="ok">
+  <list>
+    <widget id="SwecoPositionPresentations">
+      <title>Sweco Position Tv</title>
+      <compression size="5351" type="zip"/>
+      <description>En app för att visa Sweco Position Presentationer på Samsung TVs</description>
+      <download>http://sweco-semhul.github.io/SwecoPositionPresentations/Apps/swecotv_v0.1.zip</download>
+    </widget>
+  </list>
+</rsp>

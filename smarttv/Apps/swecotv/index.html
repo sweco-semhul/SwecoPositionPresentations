@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="sv">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>Sweco Position TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style type="text/css">
+      body { 
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <script type="text/javascript">
+      // This is stupid, I can just let them fail but I don't like the errors.
+      // Samsung Smart TV Javascript Libs
+      // --------------------------------
+      if( navigator.userAgent.search(/Maple/) > -1) {     
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/Plugin/Define.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/Util/Include.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/Util/Language.js"></scri'+'pt>');
+        document.write('<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/jquery.js"></scri'+'pt>');
+      }
+      // --------------------------------
+
+      var init = function() {
+        if(typeof Common !== 'undefined') {
+          // Init Samsung Smart TV Libs
+          // Create Common module
+          var widgetAPI = new Common.API.Widget();
+          // Send ready message to Application Manager
+          widgetAPI.sendReadyEvent(); 
+        }
+        var pres = document.getElementById('presentation');
+        pres.width = window.innerWidth;
+        pres.height = window.innerHeight;
+        pres.src = 'http://sweco-semhul.github.io/SwecoPositionPresentations/';
+      };
+    </script>
+  </head>
+  <body onload="init();">
+    <iframe id="presentation" src="" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </body>
+</html>
