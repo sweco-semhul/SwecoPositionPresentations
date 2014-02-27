@@ -5,7 +5,7 @@
       <title>Sweco Position Tv</title>
       <compression size="5351" type="zip"/>
       <description>En app för att visa Sweco Position Presentationer på Samsung TVs</description>
-      <download>http://sweco-semhul.github.io/SwecoPositionPresentations/smarttv/Apps/swecotv_v0.1.zip</download>
+      <download>http://sweco-semhul.github.io/SwecoPositionPresentations/smarttv/widget/swecotv_v0.1.zip</download>
     </widget>
   </list>
 </rsp>
