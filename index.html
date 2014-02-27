@@ -1,56 +1,52 @@
 <html>
 <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            var presentations = [
-                {
-                    name: '',
-                    time: 30,
-                    url: 'https://swecogroup-my.sharepoint.com/personal/martin_hultman_sweco_se/_layouts/15/guestaccess.aspx?guestaccesstoken=HpgMMKczwSGOCNuzSe5ceDdXkQiqthZWtrJnzSX%2fs6g%3d&docid=00ed58290289b4967a206682f637d928a'
-                },
-                {
-                    name: 'test',
-                    time: 30,
-                    url: '//slid.es/hulken/test_hulken/embed?token=vUC2C7rFKW6pyfqRRAa9LQhwfEQr&style=light'
-                    
-                },
-
+        
+        var presentations = [
+            {
+                name: '',
+                time: 30,
+                url: 'https://swecogroup-my.sharepoint.com/personal/martin_hultman_sweco_se/_layouts/15/WopiFrame.aspx?guestaccesstoken=HpgMMKczwSGOCNuzSe5ceDdXkQiqthZWtrJnzSX%2fs6g%3d&docid=00ed58290289b4967a206682f637d928a&action=embedview&wdAr=1.3333333333333333&wdEaa=1'
+            },
+            {
+                name: 'test',
+                time: 30,
+                url: '//slid.es/hulken/test_hulken/embed?token=vUC2C7rFKW6pyfqRRAa9LQhwfEQr&style=light'
                 
-                {
-                    name: 'test',
-                    time: 30,
-                    url: 'https://docs.google.com/presentation/d/1suKLs1hFMeRNt9ukAoCvy4KB5H62uXygX3BnytC2Bnk/embed?start=true&loop=true&delayms=3000'
-                }
-            ];
+            },
+            {
+                name: 'test',
+                time: 30,
+                url: 'https://docs.google.com/presentation/d/1suKLs1hFMeRNt9ukAoCvy4KB5H62uXygX3BnytC2Bnk/embed?start=true&loop=true&delayms=3000'
+            }
+        ];
 
-            var $presentation = $('#presentation');
-
+        var init = function() {
+            // Get iframe
+            var presIframe = document.getElementById('presentation');
+            
             var i = -1;
+            /* animation
+            *  Loop over presentations, load urls and change over time
+            */
             function animation () {
-                
                 setTimeout(function () {
-                    
-                    if (i < (presentations.length-1)) {
-                        i++;    
-                    } else {
-                        i = 0;
-                    }
+                    // Calculate index                    
+                    (i < (presentations.length-1)) ? i++ : i = 0;
+                    // Get current presentation
                     presentation = presentations[i];
-
-                    console.log(i);
-                    $presentation.attr('src', presentation.url);
-                    
-
+                    // Load presentation
+                    presIframe.src = presentation.url;
+                    // Animate
                     animation();
                 }, presentation.time*1000)
             }
-
+            // Initiate animation
             animation();
-        
-           
-            $presentation.width($(window).width()).height($(window).height());
-        });
+            // Make iFrame fullscreen
+            presIframe.width = window.innerWidth;
+            presIframe.height = window.innerHeight;
+        }
     </script>
     <style type="text/css">
         body {
@@ -59,7 +55,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="init()">
     <iframe id="presentation" src="" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </body>
 </html>

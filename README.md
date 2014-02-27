@@ -27,7 +27,12 @@ Glöm inte se till att din PowerPoint har automatisk frammatning aktiverad.
 8. Klicka på *Share with People*
 9. Klicka på *Get a link*
 10. Klicka på *CREATE LINK*
-16. Kopiera URL:en och klistra in det enligt konfigurationen ovan
+11. Öppna presentationen igen
+12. Välj *File/Arkiv* i menyn
+13. Välj *Share/Dela*
+14. Klicka på *Embed*
+15. Klicka på *pilen* längst till höger bredvid *Interaction* och aktivera *Use default autoadvance settings from the file*
+16. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
 
 ### Google Drive
 1. Öpnna presentationen i Google Drive
@@ -37,7 +42,7 @@ Glöm inte se till att din PowerPoint har automatisk frammatning aktiverad.
 5. Klicka i *Start slideshow as soon as the player loads* och *Restart slideshow after the last slide*
 6. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
 
-### slid.es
+### slid.es2. 
 1. Klicka på *Visibility-ikonen*
 2. Välj *Public*
 3. Klicka på *Share-ikonen*
