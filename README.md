@@ -24,9 +24,10 @@ Glöm inte se till att din PowerPoint har automatisk frammatning aktiverad.
 5. Öppna den presentationen, genom att klicka på den i listan
 6. Välj *File/Arkiv* i menyn 
 7. Välj *Share/Dela*
-8. Klicka på *Embed*
-9. Klicka på *pilen* längst till höger bredvid *Interaction* och aktivera *Use default autoadvance settings from the file*
-10. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
+8. Klicka på *Share with People*
+9. Klicka på *Get a link*
+10. Klicka på *CREATE LINK*
+16. Kopiera URL:en och klistra in det enligt konfigurationen ovan
 
 ### Google Drive
 1. Öpnna presentationen i Google Drive
@@ -37,7 +38,9 @@ Glöm inte se till att din PowerPoint har automatisk frammatning aktiverad.
 6. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
 
 ### slid.es
-1. Klicka på Share-ikonen
-2. Välj Footer style i drop-downen
-3. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
+1. Klicka på *Visibility-ikonen*
+2. Välj *Public*
+3. Klicka på *Share-ikonen*
+4. Välj Footer style i drop-downen
+5. Kopiera URL:en ur src="" attributet och klistra in det enligt konfigurationen ovan
 
