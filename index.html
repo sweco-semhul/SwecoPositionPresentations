@@ -24,30 +24,36 @@
         ];
 
         var init = function() {
-            // Get iframe
-            var presIframe = document.getElementById('presentation');
-            
-            var i = -1;
-            /* animation
-            *  Loop over presentations, load urls and change over time
-            */
-            function animation () {
-                setTimeout(function () {
-                    // Calculate index                    
-                    (i < (presentations.length-1)) ? i++ : i = 0;
-                    // Get current presentation
-                    presentation = presentations[i];
-                    // Load presentation
-                    presIframe.src = presentation.url;
-                    // Animate
-                    animation();
-                }, presentation.time*1000)
-            }
-            // Initiate animation
-            animation();
-            // Make iFrame fullscreen
-            presIframe.width = window.innerWidth;
-            presIframe.height = window.innerHeight;
+            setTimeout(function () {
+                
+                var startTextElement = document.getElementById('start-text');
+                startTextElement.parentNode.removeChild(startTextElement);
+
+                // Get iframe
+                var presIframe = document.getElementById('presentation');
+                
+                var i = -1;
+                /* animation
+                *  Loop over presentations, load urls and change over time
+                */
+                function animation () {
+                    setTimeout(function () {
+                        // Calculate index                    
+                        (i < (presentations.length-1)) ? i++ : i = 0;
+                        // Get current presentation
+                        presentation = presentations[i];
+                        // Load presentation
+                        presIframe.src = presentation.url;
+                        // Animate
+                        animation();
+                    }, presentation.time*1000)
+                }
+                // Initiate animation
+                animation();
+                // Make iFrame fullscreen
+                presIframe.width = window.innerWidth;
+                presIframe.height = window.innerHeight;
+            }, 2000);
         }
     </script>
     <style type="text/css">
@@ -55,9 +61,17 @@
             padding: 0;
             margin: 0;
         }
+        #start-text {
+            width:100%; 
+            text-align: center; 
+            margin-top: 20px; 
+            font-size:40px;
+            font-family: sans-serif;
+        }
     </style>
 </head>
 <body onload="init()">
+    <div id="start-text" style="">startar</div>
     <iframe id="presentation" src="" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </body>
 </html>
