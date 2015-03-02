@@ -1,6 +1,9 @@
 SwecoPositionPresentations
 ==========================
 
+Finns här:
+http://sweco-semhul.github.io/SwecoPositionPresentations
+
 
 För att lägga till en presentation koperia in embedd urlen i arrayen **presentations**
 
